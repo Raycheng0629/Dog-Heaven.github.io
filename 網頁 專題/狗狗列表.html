@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>狗狗品種</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EAEAEA;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #001F3F;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+    
+    .site-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      color: #ffffff;
+    }
+    
+    .dog-section {
+      padding: 20px;
+      flex: 1;
+      text-align: center; /* 中心對齊 */
+    }
+    
+    .section-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000000;
+      text-align: center; /* 中心對齊 */
+    }
+    
+    .info-item {
+      margin-bottom: 10px;
+    }
+    
+    .dog-grid {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    
+    .dog-item {
+      text-align: center;
+    }
+    
+    .dog-image {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dog-button {
+      display: inline-block;
+      margin: 10px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #001F3F;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      border: 2px solid #001F3F;
+    }
+    
+    .dog-button:hover {
+      background-color: #FF7F50;
+      border-color: #FF7F50;
+    }
+    
+    .footer-section {
+      text-align: center;
+      padding: 10px;
+      background-color: #001F3F;
+      color: #ffffff;
+    }
+    
+    /* 返回按鈕 */
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #001F3F;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: absolute; /* 設置為絕對定位 */
+      top: 100px; /* 距離頂部100px */
+      left: 20px; /* 距離左側20px */
+    }
+    
+    .back-button:hover {
+      background-color: #FF7F50; /* 當滑鼠懸停時更改背景顏色為橙色 */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="" alt="" class="logo">
+      <h1 class="site-title">DOG BREEDS UNIVERSE</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="dog-section">
+      <h2 class="section-title">狗狗品種</h2>
+      <a href="主頁.html" class="back-button">返回</a> <!-- 添加返回按鈕 -->
+      <div class="dog-grid">
+        <div class="dog-item">
+          <img src="生成圖片/小型犬.png" alt="Small Dog" class="dog-image"> <!-- Replace with small dog image URL -->
+          <h3>小型犬</h3>
+          <a href="小型犬.html" class="dog-button">Click here</a> <!-- Link to small dog page -->
+        </div>
+        <div class="dog-item">
+          <img src="生成圖片/中型犬.png" alt="Medium Dog" class="dog-image"> <!-- Replace with medium dog image URL -->
+          <h3>中型犬</h3>
+          <a href="中型犬.html" class="dog-button">Click here</a> <!-- Link to medium dog page -->
+        </div>
+        <div class="dog-item">
+          <img src="生成圖片/大型犬.png" alt="Large Dog" class="dog-image"> <!-- Replace with large dog image URL -->
+          <h3>大型犬</h3>
+          <a href="大型犬.html" class="dog-button">Click here</a> <!-- Link to large dog page -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+    <p>&copy; 2024 狗品種宇宙. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

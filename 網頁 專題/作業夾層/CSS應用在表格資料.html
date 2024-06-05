@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS應用於表格資料</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .large {
+            color: #ff6347;
+            font-weight: bold;
+        }
+        .medium {
+            color: #ffa500;
+            font-weight: bold;
+        }
+        .small {
+            color: #4682b4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>第十六章:CSS應用於表格資料</h1>
+    <p>在這一章中，我們將學習如何使用CSS來美化和控制表格的外觀。表格是一種用於組織和展示資料的結構化方式，通過應用不同的CSS屬性，我們可以讓表格更加美觀且易於閱讀。</p>
+    
+    <h2>表格的基本結構</h2>
+    <p>表格的基本HTML標籤包括<code>&lt;table&gt;</code>、<code>&lt;tr&gt;</code>、<code>&lt;th&gt;</code>和<code>&lt;td&gt;</code>。以下是一個範例表格，介紹了大中小型犬的特徵。</p>
+    
+    <table>
+        <tr>
+            <th>犬種</th>
+            <th>類型</th>
+            <th>特徵</th>
+        </tr>
+        <tr>
+            <td>德國牧羊犬</td>
+            <td class="large">大型犬</td>
+            <td>聰明、忠誠、工作能力強</td>
+        </tr>
+        <tr>
+            <td>邊境牧羊犬</td>
+            <td class="medium">中型犬</td>
+            <td>聰明、活潑、適合牧羊</td>
+        </tr>
+        <tr>
+            <td>柴犬</td>
+            <td class="small">小型犬</td>
+            <td>獨立、勇敢、警惕</td>
+        </tr>
+        <tr>
+            <td>黃金獵犬</td>
+            <td class="large">大型犬</td>
+            <td>友善、溫順、適合家庭</td>
+        </tr>
+        <tr>
+            <td>貴賓犬</td>
+            <td class="small">小型犬</td>
+            <td>聰明、活潑、適合家庭</td>
+        </tr>
+    </table>
+
+    <h2>CSS樣式說明</h2>
+    <p>在上述範例中，我們使用了以下CSS屬性來美化表格：</p>
+    <ul>
+        <li><code>border-collapse</code>: 使表格邊框合併，消除雙重邊框效果。</li>
+        <li><code>border</code>: 為表格標題和單元格設定邊框。</li>
+        <li><code>padding</code>: 為表格標題和單元格設定內部間距。</li>
+        <li><code>background-color</code>: 設定表格背景顏色和標題背景顏色。</li>
+        <li><code>text-align</code>: 設定文字對齊方式。</li>
+        <li><code>tr:nth-child(even)</code>: 使用斑馬紋效果，設定偶數行的背景顏色。</li>
+        <li><code>tr:hover</code>: 當滑鼠懸停在表格行上時改變其背景顏色。</li>
+        <li><code>color</code> 和 <code>font-weight</code>: 用於不同類型犬種的文字樣式。</li>
+    </ul>
+</body>
+</html>

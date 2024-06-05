@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>製作輸入表單</title>
+</head>
+<body>
+    <h1>第9章：製作輸入表單</h1>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>基本資訊</legend>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">電子郵件:</label>
+            <input type="email" id="email" name="email"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>性別</legend>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">男</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">女</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>興趣</legend>
+            <input type="checkbox" id="sports" name="interest" value="sports">
+            <label for="sports">運動</label><br>
+            <input type="checkbox" id="music" name="interest" value="music">
+            <label for="music">音樂</label><br>
+            <input type="checkbox" id="reading" name="interest" value="reading">
+            <label for="reading">閱讀</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>教育程度</legend>
+            <label for="education">選擇一個選項:</label>
+            <select id="education" name="education">
+                <option value="highschool">高中</option>
+                <option value="bachelor">學士</option>
+                <option value="master">碩士</option>
+                <option value="doctorate">博士</option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁CSS動畫</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            position: relative; /* 讓底部的方塊可以正確定位 */
+        }
+        h1, h2 {
+            text-align: center;
+            color: #0056b3;
+        }
+        p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out forwards; /* 添加animation-fill-mode */
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .medium-dog {
+            animation: slideIn 1s ease-out forwards; /* 添加animation-fill-mode */
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* 新增的方塊動畫 */
+        .block {
+            width: 50px;
+            height: 50px;
+            background-color: #0056b3;
+            position: absolute;
+            bottom: 20px;
+            animation: moveLeftRight 2s ease-in-out infinite alternate;
+        }
+
+        .block.left {
+            left: 20px;
+        }
+
+        .block.right {
+            right: 20px;
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translateX(-20px);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>第二十二章:網頁CSS動畫</h1>
+    <p>在本章中，我們將介紹不同大小的狗狗，並展示如何使用CSS樣式和動畫來美化HTML表格。CSS動畫和過渡效果是增強網頁用戶體驗的強大工具。</p>
+
+    <h2>狗狗大小分類表</h2>
+    <p>以下表格介紹了不同大小的狗狗品種及其平均體重，並應用了不同的CSS樣式和動畫效果以提升視覺效果和用戶體驗。</p>
+    
+    <table>
+        <tr>
+            <th>大小分類</th>
+            <th>品種</th>
+            <th>平均體重</th>
+        </tr>
+        <tr class="small-dog">
+            <td>小型犬</td>
+            <td>吉娃娃</td>
+            <td>1.5 - 3 公斤</td>
+        </tr>
+        <tr class="small-dog">
+            <td>小型犬</td>
+            <td>博美犬</td>
+            <td>1.9 - 3.5 公斤</td>
+        </tr>
+        <tr class="medium-dog">
+            <td>中型犬</td>
+            <td>比格犬</td>
+            <td>9 - 11 公斤</td>
+        </tr>
+        <tr class="medium-dog">
+            <td>中型犬</td>
+            <td>鬥牛犬</td>
+            <td>18 - 23 公斤</td>
+        </tr>
+        <tr class="large-dog">
+            <td>大型犬</td>
+            <td>德國牧羊犬</td>
+            <td>22 - 40 公斤</td>
+        </tr>
+        <tr class="large-dog">
+            <td>大型犬</td>
+            <td>黃金獵犬</td>
+            <td>25 - 34 公斤</td>
+        </tr>
+    </table>
+
+    <h2>程式碼說明</h2>
+    <p>在這個範例中，我們使用了以下CSS屬性來美化表格並應用動畫效果：</p>
+    <ul>
+        <li><code>border-collapse</code>: 使表格邊框合併，消除雙重邊框效果。</li>
+        <li><code>border</code>: 為表格標題和單元格設定邊框。</li>
+        <li><code>padding</code>: 為表格標題和單元格設定內部間距。</li>
+        <li><code>background-color</code>: 設定表格背景顏色和標題背景顏色。</li>
+        <li><code>text-align</code>: 設定文字對齊方式。</li>
+        <li><code>tr:nth-child(even)</code>: 使用斑馬紋效果，設定偶數行的背景顏色。</li>
+        <li><code>tr:hover</code>: 當滑鼠懸停在表格行上時改變其背景顏色。</li>
+        <li><code>@keyframes</code>: 定義動畫效果，這裡我們使用<code>fadeIn</code>和<code>slideIn</code>來分別控制表格和中型犬行的動畫效果。</li>
+        <li>新增了兩個方塊（block），它們的動畫效果是左右移動：</li>
+        <ul>
+            <li><code>.block</code>: 基本樣式設置，包括尺寸、顏色和動畫設置。</li>
+            <li><code>.block.left</code> 和 <code>.block.right</code>: 使用絕對定位設置在頁面底部左右兩側。</li>
+            <li><code>@keyframes moveLeftRight</code>: 定義了方塊的左右移動動畫效果。</li>
+        </ul>
+    </ul>
+
+    <!-- 新增方塊 -->
+    <div class="block left"></div>
+    <div class="block right"></div>
+</body>
+</html>

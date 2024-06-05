@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>註冊 - 狗品種宇宙</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EAEAEA;
+      color: #000000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #001F3F;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .site-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .form-section {
+      padding: 40px;
+      background-color: #FFFFFF;
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      margin-top: 100px;
+      border-radius: 10px;
+    }
+
+    .form-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #000000;
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .form {
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-submit {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #001F3F;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-submit:hover {
+      background-color: #FF7F50;
+    }
+
+    /* 返回按鈕 */
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #001F3F;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: absolute; /* 設置為絕對定位 */
+      top: 100px; /* 距離頂部20px */
+      left: 20px; /* 距離左側20px */
+    }
+
+    .back-button:hover {
+      background-color: #FF7F50; /* 當滑鼠懸停時更改背景顏色為橙色 */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="" alt="" class="logo">
+      <h1 class="site-title">DOG BREEDS UNIVERSE</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <a href="主頁.html" class="back-button">返回</a> <!-- 添加返回按鈕 -->
+      <h2 class="form-title">註冊</h2>
+      <div class="form-container">
+        <form class="form" action="register.php" method="post">
+          <div class="form-group">
+            <label for="name" class="form-label">姓名</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">電子郵件</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">密碼</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+          </div>
+          <button type="submit" class="form-submit">註冊</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+  </footer>
+</body>
+</html>

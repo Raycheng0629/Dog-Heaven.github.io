@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model 詳細示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .box {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            border: 10px solid black;
+            margin: 30px;
+            background-color: lightgrey;
+        }
+        .description {
+            margin-bottom: 20px;
+        }
+        .code {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="description">
+            <h1>第十五章:CSS Box Model 詳細介紹</h1>
+            <p>Box Model 是 CSS 中的一個基本概念，用於描述元素的內容、內邊距、邊框和外邊距的佈局結構。理解 Box Model 對於掌握 CSS 排版和佈局技巧至關重要。</p>
+        </div>
+        <div class="box">
+            這是一個示例盒子，用來展示 CSS Box Model 的各個組成部分。
+        </div>
+        <div class="description">
+            <h2>Box Model 各部分詳解</h2>
+            <p><strong>Content：</strong> 內容是元素的實際內容區域，如文字或圖片。</p>
+            <p><strong>Padding：</strong> 內邊距是內容與邊框之間的空間，增加了元素的可見大小。</p>
+            <p><strong>Border：</strong> 邊框是圍繞內邊距和內容的邊界，可以設置其寬度、樣式和顏色。</p>
+            <p><strong>Margin：</strong> 外邊距是邊框外部的空間，用於控制元素之間的距離。</p>
+          
+    </div>
+</body>
+</html>

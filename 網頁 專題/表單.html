@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>表單 - 狗品種宇宙</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EAEAEA;
+      color: #000000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #001F3F;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .site-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .form-section {
+      padding: 40px;
+      background-color: #FFFFFF;
+      text-align: center;
+    }
+
+    .form-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #000000;
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .form {
+      width: 100%;
+      max-width: 600px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .form-submit {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #001F3F;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-submit:hover {
+      background-color: #FF7F50;
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #001F3F;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: absolute; /* 設置為絕對定位 */
+      top: 100px; /* 距離頂部20px */
+      left: 20px; /* 距離左側20px */
+    }
+
+    .back-button:hover {
+      background-color: #FF7F50; /* 當滑鼠懸停時更改背景顏色為橙色 */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="" alt="" class="logo">
+      <h1 class="site-title">DOG BREEDS UNIVERSE</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+        <a href="主頁.html" class="back-button">返回</a> <!-- 添加返回按鈕 -->
+        <h2 class="form-title">狗狗需求表單</h2>
+        <div class="form-container">
+          <form class="form" action="submit_form.php" method="post">
+          <div class="form-group">
+            <label for="name" class="form-label">姓名</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">電子郵件地址</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">聯絡電話</label>
+            <input type="text" id="phone" name="phone" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="location" class="form-label">居住地區</label>
+            <input type="text" id="location" name="location" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="experience" class="form-label">您過去有飼養過狗狗嗎？</label>
+            <select id="experience" name="experience" class="form-select" required>
+              <option value="yes">是</option>
+              <option value="no">否</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="previousDogs" class="form-label">如果有，請描述您飼養過的狗狗的品種和經驗。</label>
+            <textarea id="previousDogs" name="previousDogs" class="form-textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="preference" class="form-label">您偏好的狗狗品種是？</label>
+            <select id="preference" name="preference" class="form-select" required>
+              <option value="small">小型犬</option>
+              <option value="medium">中型犬</option>
+              <option value="large">大型犬</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="traits" class="form-label">您希望狗狗具備哪些性格特徵？（多選）</label>
+            <table>
+              <tr>
+                <td><input type="checkbox" name="traits[]" value="friendly">友善</td>
+                <td><input type="checkbox" name="traits[]" value="active">活躍</td>
+                <td><input type="checkbox" name="traits[]" value="quiet">安靜</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="traits[]" value="protective">保護性強</td>
+                <td><input type="checkbox" name="traits[]" value="easy-to-train">易於訓練</td>
+                <td><input type="checkbox" name="traits[]" value="good-with-children">適合與孩子相處</td>
+              </tr>
+            </table>
+          </div>
+          <div class="form-group">
+            <label for="environment" class="form-label">您的居住環境是？</label>
+            <select id="environment" name="environment" class="form-select" required>
+              <option value="apartment">公寓</option>
+              <option value="house">獨棟房屋</option>
+              <option value="other">其他（請說明）</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="yard" class="form-label">是否有庭院或其他適合狗狗活動的空間？</label>
+            <select id="yard" name="yard" class="form-select" required>
+              <option value="yes">是</option>
+              <option value="no">否</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="time" class="form-label">您每天有多少時間可以陪伴狗狗？</label>
+            <select id="time" name="time" class="form-select" required>
+              <option value="less_than_1">少於1小時</option>
+              <option value="1-2">1-2小時</option>
+              <option value="2-4">2-4小時</option>
+              <option value="more_than_4">超過4小時</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="walk" class="form-label">您是否有時間每天帶狗狗散步或進行其他運動？</label>
+            <select id="walk" name="walk" class="form-select" required>
+              <option value="yes">是</option>
+              <option value="no">否</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="health" class="form-label">您對狗狗有特定的健康或飲食要求嗎？</label>
+            <textarea id="health" name="health" class="form-textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="support" class="form-label">您希望我們提供哪些方面的支援或建議？</label>
+            <textarea id="support" name="support" class="form-textarea"></textarea>
+          </div>
+          <button type="submit" class="form-submit">提交</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+  </footer>
+</body>
+</html>

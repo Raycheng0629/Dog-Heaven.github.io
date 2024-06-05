@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第7章：嵌入地圖</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px; /* Added to limit image height */
+        }
+    </style>
+</head>
+<body>
+    <h1>第7章：嵌入地圖</h1>
+    <h2>7-5：在表格內嵌入圖片</h2>
+    <p>在設計網頁時，可以在表格中嵌入圖片，以達到更好的視覺效果。以下是示例表格，其中包含不同大小的狗狗圖片。</p>
+
+    <h3>狗狗圖片分類</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>狗狗大小</th>
+                <th>圖片</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>大型犬</td>
+                <td><img src="圖片/哈士奇.webp" alt="大型犬"></td>
+            </tr>
+            <tr>
+                <td>中型犬</td>
+                <td><img src="圖片/柯基犬.jpg" alt="中型犬"></td>
+            </tr>
+            <tr>
+                <td>小型犬</td>
+                <td><img src="圖片/約克夏.jpg" alt="小型犬"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>7-6：設計圖片的超連結</h2>
+    <p>點選以下圖片可以進入相關網頁。</p>
+    <ul>
+        <li><a href="http://www.nps.gov/yell"><img src="圖片/Yellowstone.jpg" alt="黃石國家公園" width="200"></a></li>
+        <li><a href="http://www.nps.gov/moru"><img src="圖片/摩斯山.jpg" alt="摩斯山" width="200"></a></li>
+    </ul>
+</body>
+</html>

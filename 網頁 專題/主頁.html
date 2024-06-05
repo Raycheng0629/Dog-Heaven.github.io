@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>【狗品種宇宙】網站</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* 全域設定 */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EAEAEA; /* 修改為與影片相符的背景色 */
+      color: #000000; /* 黑色文字 */
+    }
+
+    /* 標頭 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #001F3F;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .site-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      color: #ffffff; /* 白色標題 */
+    }
+
+    .nav-menu {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-left: auto; /* 將導航菜單移到右邊 */
+    }
+
+    .nav-item {
+      margin-right: 20px;
+    }
+
+    .nav-item a {
+      color: #ffffff; /* 白色文字 */
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px; /* 增加填充以改善可點擊區域 */
+    }
+
+    .nav-item a:hover {
+      color: #FF7F50; /* 當滑鼠懸停時更改文字顏色為橙色 */
+    }
+
+    /* 主要內容 */
+    .hero-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      background-color: #f0f0f0; /* 淺灰色背景 */
+      position: relative;
+      overflow: hidden; /* 確保內容不會超出邊界 */
+    }
+
+    .hero-content {
+      position: absolute;
+      text-align: center;
+      color: #ffffff;
+      /* 移除背景色和邊框 */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .hero-image {
+      width: 100%; /* 影片寬度佔滿容器 */
+      height: 100%; /* 影片高度佔滿容器 */
+      object-fit: cover; /* 確保影片以覆蓋方式填滿容器 */
+    }
+
+    .hero-title {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .section {
+      padding: 40px;
+      text-align: center;
+      background-color: #FFFFFF; /* 修改為與影片相符的背景色 */
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #000000; /* 黑色標題 */
+    }
+
+    .dog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+    }
+
+    .dog-item {
+      text-align: center;
+    }
+
+    .dog-image {
+      max-width: 80%; /* 調整圖片大小 */
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .info-section {
+      padding: 40px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .info-item {
+      margin-bottom: 20px;
+    }
+
+    .footer-section {
+      display: flex;
+      justify-content: space-around;
+      background-color: #001F3F;
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .footer-item {
+      text-align: center;
+      font-size: 14px; /* 調整字體大小 */
+    }
+
+    .footer-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .social-link {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px;
+      margin-left: 10px;
+    }
+
+    .social-link.facebook {
+      background-image: url("facebook.png");
+    }
+
+    .social-link.instagram {
+      background-image: url("instagram.png");
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="" alt="" class="logo">
+      <h1 class="site-title">DOG BREEDS UNIVERSE</h1>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="主頁.html">Home</a></li>
+        <li class="nav-item"><a href="狗狗列表.html">Dog list</a></li>
+        <li class="nav-item"><a href="關於我們.html">About</a></li>
+        <li class="nav-item"><a href="表單.html">Form</a></li>
+        <li class="nav-item"><a href="登入.html">Log In</a></li>
+        <li class="nav-item"><a href="註冊.html">Register</a></li>
+        <li class="nav-item"><a href="作業主頁.html">Homework</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">WELCOME TO DOG </h1>
+        <h1 class="hero-title">BREEDS INTRODUCE WEBSITE.</h1>
+      </div>
+      <video src="動態桌布狗狗.mp4" class="hero-image" autoplay loop muted></video> <!-- 替換成狗狗影片的URL -->
+    </section>
+
+    <section class="info-section">
+        <h2 class="section-title">網站介紹</h2>
+      <p class="info-item">歡迎來到【狗品種宇宙】！我們致力於幫助您找到最適合您生活方式的完美狗品種。我們提供關於不同品種、特性和照顧方式的詳細資訊,並有專業團隊提供多年訓練和照顧經驗。除了品種資訊,我們也重視人與毛孩的關係,定期分享訓練技巧、養狗常識和健康資訊。我們希望每隻狗都擁有充滿愛的家,並透過配對合適品種實現這目標。</p>
+      <p class="info-item">此外,我們舉辦社區活動和聚會,讓狗主人分享經驗、故事並建立友誼。無論您是新手還是有經驗的主人,歡迎加入我們！感謝光臨,希望您在這裡找到有用資訊,並一同探索美好狗品種世界！如有任何問題或需要幫助,隨時告訴我哦。</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">狗狗品種</h2>
+      <p class="info-item">本網站將介紹不同大小型犬的相關資訊,包括圖片、品種名稱、特色以及飼養需求。我們將狗狗分為大型犬、中型犬和小型犬三大類,詳細介紹
+        各類別的代表性品種。</p>
+        <p class="info-item">每項品種的圖片和名稱將清楚呈現,讓您能快速認識並了解牠們的外觀特徵。接著我們會介紹各品種的性格特點、適合的居住環境,以及日常飼養所需的注意事項,如運動需求、訓練方式等。</p>
+        <p class="info-item">通過這些詳細資訊,我們希望能幫助您找到最適合自己生活方式的寵物狗狗。無論是喜歡活潑的小型犬,還是偏愛穩重的大型犬,本網站都能提供全面的參考,讓您選擇到心儀的毛小孩。</p>
+        <p class="info-item" style="text-align: center;">歡迎您細閱網站內容,找到理想的狗狗伴侶,一起開啟美好的相處之旅!</p>
+        <div class="dog-grid">
+          <div class="dog-item">
+            <a href="小型犬.html">
+              <img src="生成圖片/小型犬.png" alt="Small Dog" class="dog-image">
+            </a>
+            <h3>小型犬</h3>
+          </div>
+          <div class="dog-item">
+            <a href="中型犬.html">
+              <img src="生成圖片/中型犬.png" alt="Medium Dog" class="dog-image">
+            </a>
+            <h3>中型犬</h3>
+          </div>
+          <div class="dog-item">
+            <a href="大型犬.html">
+              <img src="生成圖片/大型犬.png" alt="Large Dog" class="dog-image">
+            </a>
+            <h3>大型犬</h3>
+          </div>      
+        </div>
+      </section>
+    </main>
+  
+    <footer class="footer-section">
+      <div class="footer-item">
+        <h2 class="footer-title">Follow</h2>
+        <div class="social-media">
+          <a href="https://www.facebook.com/" class="social-link facebook"></a>
+          <a href="https://www.instagram.com/" class="social-link instagram"></a>
+        </div>
+      </div>
+      <div class="footer-item">
+        <h2 class="footer-title">Contact</h2>
+        <p>Email: loveddogs@dogbreeds.com</p>
+        <p>Phone: 0968983247</p>
+      </div>
+      <div class="footer-item">
+        <h2 class="footer-title">Address</h2>
+        <p>555 Willie Stargell Ave.</p>
+        <p>Alameda CA 94501 West of Webster St.</p>
+      </div>
+    </footer>
+  </body>
+  </html>
+  
